@@ -6,7 +6,7 @@
  FrontEnd Deployed Link- https://metta-social-currency-find-9623.netlify.app/
 
 
-`*`I've created a web application using React JS that allows users to find countries based on currency. The application comprises three main components:
+`*` I've created a web application using React JS that allows users to find countries based on currency. The application comprises three main components:
 
 `1` Form Component: Manages user input and triggers the currency search. <br>
 
