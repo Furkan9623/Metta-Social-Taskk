@@ -7,8 +7,12 @@ const SingleCard = ({ elem }) => {
         <img src={flag} alt="" />
       </div>
       <div>
-        <p>Name: {name}</p>
-        <p>Capital: {capital}</p>
+        <p>
+          <strong>Name : </strong> {name}
+        </p>
+        <p>
+          <strong>Capital : </strong> {capital}
+        </p>
       </div>
     </div>
   );

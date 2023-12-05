@@ -3,13 +3,22 @@ import SingleCard from "./SingleCard";
 import { useEffect, useState } from "react";
 import fetchApiCall from "../api/my-api";
 import Spinner from "./Spinner";
+import { Pagination } from "./Pagination";
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [country, setCountry] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-
+  const [showPerPage, setShowPerPage] = useState(6);
+  const [pagination, setPagination] = useState({
+    start: 0,
+    end: showPerPage,
+  });
+  const onPagination = (startValue, endValue) => {
+    console.log(startValue, endValue);
+    setPagination({ start: startValue, end: endValue });
+  };
   const fetchData = async () => {
     setLoading(true);
     const result = await fetchApiCall(searchQuery);
@@ -69,7 +78,7 @@ const SearchBar = () => {
           <>
             {country?.length > 0 ? (
               <>
-                {country.map((elem) => {
+                {country.slice(pagination.start, pagination.end).map((elem) => {
                   console.log(elem);
                   return <SingleCard elem={elem} />;
                 })}
@@ -88,6 +97,13 @@ const SearchBar = () => {
           </>
         )}
       </div>
+      {country?.length > 6 && (
+        <Pagination
+          showperPage={showPerPage}
+          onPagination={onPagination}
+          total={country.length}
+        />
+      )}
     </div>
   );
 };
