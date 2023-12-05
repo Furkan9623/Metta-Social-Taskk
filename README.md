@@ -21,7 +21,7 @@ Feel free to explore the application, and if you have any feedback or encounter 
 # Features
 `1` Search Countries By Currency. <br>
 `2` Debouncing Implement. <br>
-`3` Error Handling.
+`3` Error Handling. <br>
 `4` Pagination.
  
  
