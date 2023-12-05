@@ -8,8 +8,10 @@
 
 `*`I've created a web application using React JS that allows users to find countries based on currency. The application comprises three main components:
 
-`1` Form Component: Manages user input and triggers the currency search.
+`1` Form Component: Manages user input and triggers the currency search. <br>
+
 `2` Card Component: Displays information about the countries found based on the entered currency. <br>
+
 `3` Spinner Component: Provides visual feedback during data retrieval.
 
 For design, I used CSS to ensure a visually appealing and responsive interface. The application features robust error handling, redirecting users to an error page with a clear message if they enter an incorrect or unsupported currency. Additionally, I implemented debouncing to optimize performance and prevent unnecessary API calls, ensuring a smoother user experience.
